@@ -1,0 +1,21 @@
+<mat-card class="m-3" style="width: 18rem;">
+  <mat-card-header>
+    <mat-card-title>Table n° {{info.tableNumber}}</mat-card-title>
+    <mat-card-subtitle>
+      {{info.order.created_at | date:"HH:mm"}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <h3 mat-subheader>Drinks</h3>
+      <mat-list-item *ngFor="let item of info.order.items">
+        <mat-icon mat-list-icon>confirmation_number</mat-icon>
+        <h4 mat-line>{{item.item.name}}</h4>
+        <p mat-line> <b>Quantity: </b>{{item.quantity}} </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions class="d-flex w-100 m-0">
+    <button mat-flat-button color="accent" class="py-2 mr-2 flex-fill" (click)="serveOrder()">Serve</button>
+  </mat-card-actions>
+</mat-card>
