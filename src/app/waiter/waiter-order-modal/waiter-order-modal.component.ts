@@ -90,8 +90,8 @@ export class WaiterOrderModalComponent implements OnInit {
   public closeClick(): void {
     this.dialogRef.close({
       status: 'updated',
-      foodOrdersModified: this.foodOrdersModified,
-      beverageOrdersModified: this.beverageOrdersModified
+      foodOrdersModified: !!this ? this.foodOrdersModified : null,
+      beverageOrdersModified: !!this ? this.beverageOrdersModified : null
     });
   }
 

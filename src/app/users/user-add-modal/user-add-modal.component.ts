@@ -39,7 +39,7 @@ export class UserAddModalComponent implements OnInit {
       },
       role: this.role.value,
       username: this.username.value,
-      password: this.username.value
+      password: this.password.value
     };
     const component = this;
     this.userService.create(data).subscribe(
