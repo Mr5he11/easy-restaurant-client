@@ -10,8 +10,3 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
-
-let onDeviceReady = () => {
-  platformBrowserDynamic().bootstrapModule(AppModule);
-};
-document.addEventListener('deviceready', onDeviceReady, false);
